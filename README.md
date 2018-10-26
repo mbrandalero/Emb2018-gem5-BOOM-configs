@@ -1,5 +1,8 @@
 
-# InstruÃÃµes
+# Instruções
 
-Clonar o repositÃ³rio. Utilizar o arquivo simulate.py como arquivo de configuraÃ§Ã£o no gem5. Exemplo:
-`gem5 simulate.py run-benchmark -c="hello"`
+Clonar o repositório. 
+
+Utilizar o arquivo simulate.py como arquivo de configuração no gem5. 
+
+Exemplo: `gem5 simulate.py run-benchmark -c="hello"`
