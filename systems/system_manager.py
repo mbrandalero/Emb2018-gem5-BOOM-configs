@@ -1,8 +1,8 @@
 from m5.util         import addToPath
 
 # CPUs
-#from ooo_1w import OoO1WCPU
-#from ooo_2w import OoO2WCPU
+from ooo_1w import OoO1WCPU
+from ooo_2w import OoO2WCPU
 from ooo_4w import OoO4WCPU
 
 # System
@@ -19,8 +19,8 @@ from m5.objects      import SystemXBar
 class SystemManager:
 
     available_cpus = {
-#        "OoO-1W" : OoO1WCPU()}
-#        "OoO-2W" : OoO2WCPU(),
+        "OoO-1W" : OoO1WCPU(),
+        "OoO-2W" : OoO2WCPU(),
         "OoO-4W" : OoO4WCPU()}
 
     def getSystem(self, args):
