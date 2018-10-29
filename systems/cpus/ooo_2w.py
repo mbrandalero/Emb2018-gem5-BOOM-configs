@@ -21,13 +21,7 @@ from m5.objects import SystemXBar
 ###############################################################################
 
 class MyIntALU(FUDesc):
-    opList = [ OpDesc(opClass='IntAdd'),
-               OpDesc(opClass='IntSub'),
-               OpDesc(opClass='IntMov'),
-               OpDesc(opClass='IntLogic'),
-               OpDesc(opClass='IntShift'),
-               OpDesc(opClass='IntCtrl'),
-               OpDesc(opClass='IntALU') ]
+    opList = [ OpDesc(opClass='IntAlu') ]
     count = 2
 
 class MyIntMultDiv(FUDesc):
