@@ -22,7 +22,7 @@ from m5.objects import SystemXBar
 
 class MyIntALU(FUDesc):
     opList = [ OpDesc(opClass='IntAlu') ]
-    count = 2
+    count = 1
 
 class MyIntMultDiv(FUDesc):
     opList = [ OpDesc(opClass='IntMult', opLat=3, pipelined=True),
@@ -146,7 +146,7 @@ class OoO1WCPU(DerivO3CPU):
 ## de instruções processadas por ciclo em cada estágio.
 ############################################################
 
-    fetchWidth    =  1 # Fetch width
+    fetchWidth    =  2 # Fetch width
     decodeWidth   =  1 # Decode width
     renameWidth   =  1 # Rename width
     dispatchWidth =  1 # Dispatch width

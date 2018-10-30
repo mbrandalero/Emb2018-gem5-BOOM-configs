@@ -131,9 +131,9 @@ class OoO2WCPU(DerivO3CPU):
 
     fetchBufferSize  =  64 # Fetch buffer size in bytes
     fetchQueueSize   =  32 # Fetch queue size in micro-ops per thread
-    numIQEntries     =  24 # Number of instruction queue entries
+    numIQEntries     =  32 # Number of instruction queue entries
     numROBEntries    =  96 # Number of reorder buffer entries
-    LQEntries        =  16 # Number of load queue entries
+    LQEntries        =  20 # Number of load queue entries
     SQEntries        =  12 # Number of store queue entries
 
     numPhysIntRegs   =  96 # Number of physical integer registers
