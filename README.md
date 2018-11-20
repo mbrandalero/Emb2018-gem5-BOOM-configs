@@ -22,3 +22,7 @@ ou
 `make CONFIG=Emb20182WBoom` (para 2-Wide)
 ou
 `make CONFIG=Emb20181WBoom` (para 1-Wide)
+
+## Geração da atividade de chaveamento do circuito
+
+Verificar README.md na pasta setup_vcd2saif.
