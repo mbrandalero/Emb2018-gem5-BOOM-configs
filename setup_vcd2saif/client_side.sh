@@ -15,15 +15,15 @@ mkfifo fifo
 # Cria um named pipe remoto chamado "fifo"
 # Substituir username por seu usuário do NSCAD
 # Substituir ufrgs-server-10 por qualquer servidor do NSCAD
-ssh username@ufrgs-server-10.inf.ufrgs.br "mkfifo fifo"
+ssh seu_user@ufrgs-server-10.inf.ufrgs.br "mkfifo fifo"
 
 # Configura ambiente Synopsis no servidor e executa vcd2saif
 # Mantém a conexão ssh aberta e vai para o background do shell
-ssh username@ufrgs-server-10.inf.ufrgs.br "~/my_set_synopsys.sh && vcd2saif -input mypipe -output boom.saif" &
+ssh seu_user@ufrgs-server-10.inf.ufrgs.br ". ~/server_side.sh && vcd2saif -input fifo -output boom.saif" &
 
 # Redireciona o conteúdo do named pipe para o servidor
 # Mantém a conexão ssh aberta e vai para o background do shell
-cat fifo | ssh username@ufrgs-server-10.inf.ufrgs.br "cat > ~/mypipe" &
+cat fifo | ssh seu_user@ufrgs-server-10.inf.ufrgs.br "cat > ~/fifo" &
 
 # Executa simulador do BOOM, escrevendo o VCD no arquivo chamado fifo,
 # com a aplicação "pk hello"
